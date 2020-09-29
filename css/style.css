@@ -3,56 +3,56 @@
 	font-family: "SFCompact";
 	src: url("../fonts/SF-Compact-Text-Bold.eot");
 	src: local("☺"), url("../fonts/SF-Compact-Text-Bold.woff") format("woff"), url("../fonts/SF-Compact-Text-Bold.ttf") format("truetype"), url("../fonts/SF-Compact-Text-Bold.svg") format("svg");
-	font-weight: normal;
+	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
-	font-family: "SFCompactSemibold";
+	font-family: "SFCompact";
 	src: url("../fonts/SF-Compact-Text-Semibold.eot");
 	src: local("☺"), url("../fonts/SF-Compact-Text-Semibold.woff") format("woff"), url("../fonts/SF-Compact-Text-Semibold.ttf") format("truetype"), url("../fonts/SF-Compact-Text-Semibold.svg") format("svg");
-	font-weight: normal;
+	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
-	font-family: "MyriadProRegular";
+	font-family: "MyriadPro";
 	src: url("../fonts/MyriadPro-Regular.eot");
 	src: local("☺"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype"), url("../fonts/MyriadPro-Regular.svg") format("svg");
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: "MyriadProSemibold";
+	font-family: "MyriadPro";
 	src: url("../fonts/MyriadPro-Semibold.eot");
 	src: local("☺"), url("../fonts/MyriadPro-Semibold.woff") format("woff"), url("../fonts/MyriadPro-Semibold.ttf") format("truetype"), url("../fonts/MyriadPro-Semibold.svg") format("svg");
-	font-weight: normal;
+	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Lucida Grande";
 	src: url("../fonts/Lucida Grande.eot");
 	src: local("☺"), url("../fonts/Lucida Grande.woff") format("woff"), url("../fonts/Lucida Grande.ttf") format("truetype"), url("../fonts/Lucida Grande.svg") format("svg");
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: "HelveticaNeuethin";
+	font-family: "HelveticaNeue";
 	src: url("../fonts/helveticaneuecyr-thin.eot");
 	src: local("☺"), url("../fonts/helveticaneuecyr-thin.woff") format("woff"), url("../fonts/helveticaneuecyr-thin.ttf") format("truetype"), url("../fonts/helveticaneuecyr-thin.svg") format("svg");
-	font-weight: normal;
+	font-weight: 100;
 	font-style: normal;
 }
 @font-face {
-	font-family: "HelveticaNeuelight";
+	font-family: "HelveticaNeue";
 	src: url("../fonts/helveticaneuecyr-light.eot");
 	src: local("☺"), url("../fonts/helveticaneuecyr-light.woff") format("woff"), url("../fonts/helveticaneuecyr-light.ttf") format("truetype"), url("../fonts/helveticaneuecyr-light.svg") format("svg");
-	font-weight: normal;
+	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
-	font-family: "HelveticaNeueMedium";
+	font-family: "HelveticaNeue";
 	src: url("../fonts/HelveticaNeueCyr-Medium.eot");
 	src: local("☺"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype"), url("../fonts/HelveticaNeueCyr-Medium.svg") format("svg");
-	font-weight: normal;
+	font-weight: 500;
 	font-style: normal;
 }
 * {
@@ -164,23 +164,11 @@ body.lock {
 	margin: 0 auto;
 	width: 100%;
 }
-@media (max-width: 948px) {
-	.container {
-		max-width: 970px;
-	}
-}
 @media (max-width: 991.98px) {
 	.container {
-		max-width: 750px;
+		padding: 0px 20px 0px 20px;
 	}
 }
-@media (max-width: 767.98px) {
-	.container {
-		max-width: none;
-		padding: 0 10px;
-	}
-}
-
 .form-row {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -579,7 +567,8 @@ textarea.input {
 	padding: 46px 0px 46px 0px;
 }
 .footer__text {
-	font-family: "MyriadProRegular";
+	font-family: "MyriadPro";
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
 	color: #909090;
@@ -597,19 +586,55 @@ textarea.input {
 	margin: 0px 18px 0px 0px;
 }
 .first-screen {
-	background-image: url("../img/first-screen/01.png");
-	height: 625px;
 	position: relative;
 	z-index: 8;
+}
+@media (max-width: 767.98px) {
+	.first-screen {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
+.first-screen .layer-1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.first-screen .layer-1 img {
+	display: none;
 }
 .first-screen__title {
 	position: relative;
 	z-index: 8;
-	font-family: "SFCompactSemibold";
+	font-family: "SFCompact";
+	font-weight: 600;
 	font-size: 35.4px;
 	line-height: 22px;
 	color: #ffffff;
 	padding: 65px 0px 0px 0px;
+}
+@media (max-width: 991.98px) {
+	.first-screen__title {
+		padding: 35px 0px 0px 0px;
+	}
+}
+@media (max-width: 767.98px) {
+	.first-screen__title {
+		text-align: center;
+	}
 }
 .first-screen__body {
 	display: -webkit-box;
@@ -624,15 +649,42 @@ textarea.input {
 	        flex: 45%;
 	padding: 103px 0px 0px 0px;
 }
+@media (max-width: 991.98px) {
+	.first-screen__left-column {
+		padding: 45px 0px 0px 0px;
+	}
+}
+@media (max-width: 767.98px) {
+	.first-screen__left-column {
+		-webkit-box-flex: 100%;
+		    -ms-flex: 100%;
+		        flex: 100%;
+		padding: 35px 0px 0px 0px;
+	}
+}
 .first-screen__right-column {
 	-webkit-box-flex: 55%;
 	    -ms-flex: 55%;
 	        flex: 55%;
 }
+@media (max-width: 767.98px) {
+	.first-screen__right-column {
+		-webkit-box-flex: 0%;
+		    -ms-flex: 0%;
+		        flex: 0%;
+	}
+}
 
 .first-screen-text {
 	position: relative;
 	z-index: 8;
+}
+@media (max-width: 767.98px) {
+	.first-screen-text {
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 1 50%;
+		        flex: 1 1 50%;
+	}
 }
 .first-screen-text__header {
 	display: -webkit-box;
@@ -654,31 +706,57 @@ textarea.input {
 	margin: 0px 0px 0px 22px;
 }
 .first-screen-text__title h2 {
-	font-family: MyriadProRegular;
+	font-family: MyriadPro;
+	font-weight: 400;
 	font-size: 32px;
 	line-height: 32px;
 	color: #fff;
 }
 .first-screen-text__title h3 {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 32px;
 	line-height: 32px;
 	color: #fff;
 }
 .first-screen-text__text {
-	font-family: "HelveticaNeuelight";
+	font-family: "HelveticaNeue";
+	font-weight: 300;
 	font-size: 16px;
 	line-height: 24px;
 	color: #fff;
 	margin: 24px 0px 10px 0px;
 	letter-spacing: 0.2px;
 }
+@media (max-width: 767.98px) {
+	.first-screen-text__text {
+		margin: 24px 0px 20px 0px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.appstorenew {
+		text-align: center;
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 30%;
+		        flex: 0 0 30%;
+	}
+}
 
 .first-screen-form {
 	margin: 53px 0px 0px 0px;
 }
+@media (max-width: 767.98px) {
+	.first-screen-form {
+		margin: 30px 0px 0px 0px;
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 40%;
+		        flex: 0 0 40%;
+	}
+}
 .first-screen-form__title {
-	font-family: MyriadProRegular;
+	font-family: MyriadPro;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
 	color: #ffffff;
@@ -689,13 +767,31 @@ textarea.input {
 	display: -ms-flexbox;
 	display: flex;
 }
+@media (max-width: 991.98px) {
+	.first-screen-form__block {
+		-ms-flex-flow: wrap;
+		    flex-flow: wrap;
+	}
+}
+@media (max-width: 767.98px) {
+	.first-screen-form__block {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
 .first-screen-form__item {
 	width: 296px;
 	height: 48px;
 	border: 2px solid #ffffff;
 }
 .first-screen-form__item .input {
-	font-family: MyriadProRegular;
+	font-family: MyriadPro;
+	font-weight: 400;
 	width: 100%;
 	height: 100%;
 	font-size: 16px;
@@ -704,6 +800,11 @@ textarea.input {
 }
 .first-screen-form__item .input.err {
 	border: 2px solid red;
+}
+@media (max-width: 767.98px) {
+	.first-screen-form__item {
+		width: 100%;
+	}
 }
 .first-screen-form__button {
 	margin: 0px 0px 0px 23px;
@@ -715,7 +816,8 @@ textarea.input {
 	        justify-content: center;
 }
 .first-screen-form__button button {
-	font-family: "MyriadProRegular";
+	font-family: MyriadPro;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 600;
@@ -725,26 +827,57 @@ textarea.input {
 	background-color: #ffffff;
 	padding: 12px 0px 12px 0px;
 }
+@media (max-width: 991.98px) {
+	.first-screen-form__button button {
+		padding: 10px 0px 10px 0px;
+	}
+}
+@media (max-width: 991.98px) {
+	.first-screen-form__button {
+		margin: 15px 0px 0px 0px;
+	}
+}
+@media (max-width: 767.98px) {
+	.first-screen-form__button {
+		margin: 30px 0px 30px 0px;
+	}
+}
 
 .iphones {
 	position: relative;
-	z-index: 10;
 }
 .iphones__1 {
 	position: absolute;
 	left: 93px;
 	top: -4px;
+	z-index: 50;
+}
+@media (max-width: 991.98px) {
+	.iphones__1 {
+		left: 10px;
+	}
 }
 .iphones__2 {
 	position: absolute;
 	top: 39px;
 	left: 218px;
+	z-index: 50;
+}
+@media (max-width: 991.98px) {
+	.iphones__2 {
+		left: 135px;
+	}
+}
+@media (max-width: 767.98px) {
+	.iphones {
+		display: none;
+	}
 }
 
 .layer-2 {
 	position: absolute;
 	width: 100%;
-	height: 625px;
+	height: 100%;
 	left: 0px;
 	top: 0px;
 	background-image: -o-linear-gradient(252deg, #3cd072 0%, rgba(60, 208, 114, 0.7) 100%);
@@ -753,7 +886,6 @@ textarea.input {
 
 .screen-2 {
 	background-color: #f0f0f0;
-	height: 624px;
 }
 .screen-2__body {
 	display: -webkit-box;
@@ -761,9 +893,32 @@ textarea.input {
 	display: flex;
 	padding: 0px 0px 50px 0px;
 }
+@media (max-width: 991.98px) {
+	.screen-2__body {
+		-ms-flex-flow: wrap;
+		    flex-flow: wrap;
+	}
+}
+@media (max-width: 767.98px) {
+	.screen-2__body {
+		padding: 0px;
+	}
+}
 .screen-2__left {
 	-ms-flex-preferred-size: 55%;
 	    flex-basis: 55%;
+	min-height: 520px;
+}
+@media (max-width: 991.98px) {
+	.screen-2__left {
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+	}
+}
+@media (max-width: 767.98px) {
+	.screen-2__left {
+		display: none;
+	}
 }
 .screen-2__iphones {
 	position: relative;
@@ -773,15 +928,60 @@ textarea.input {
 	left: 72px;
 	top: -38px;
 }
+@media (max-width: 991.98px) {
+	.screen-2__iphone-1 {
+		left: 30%;
+	}
+}
 .screen-2__iphone-2 {
 	position: absolute;
 	top: 172px;
 	left: -92px;
 }
+@media (max-width: 991.98px) {
+	.screen-2__iphone-2 {
+		left: 15%;
+	}
+}
 .screen-2__right {
 	padding: 145px 0px 0px 42px;
 	-ms-flex-preferred-size: 45%;
 	    flex-basis: 45%;
+}
+@media (max-width: 991.98px) {
+	.screen-2__right {
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
+@media (max-width: 767.98px) {
+	.screen-2__right {
+		-ms-flex-flow: wrap;
+		    flex-flow: wrap;
+		padding: 45px 0px 0px 0px;
+	}
+}
+@media (max-width: 991.98px) {
+	.screen-2__item {
+		-ms-flex-preferred-size: 50%;
+		    flex-basis: 50%;
+		padding: 0px 20px 0px 0px;
+	}
+}
+@media (max-width: 767.98px) {
+	.screen-2__item {
+		padding: 0px;
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+	}
+}
+@media (max-width: 991.98px) {
+	.screen-2__item:last-child {
+		padding: 0px 0px 0px 0px;
+	}
 }
 .screen-2__title {
 	display: -webkit-box;
@@ -792,14 +992,16 @@ textarea.input {
 	        align-items: center;
 }
 .screen-2__title-title {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 32px;
 	padding: 0px 0px 0px 25px;
 	color: #3cd072;
 }
 .screen-2__text {
-	font-family: HelveticaNeueMedium;
+	font-family: HelveticaNeue;
+	font-weight: 500;
 	font-size: 16px;
 	line-height: 24px;
 	padding: 10px 0px 45px 0px;
@@ -807,7 +1009,8 @@ textarea.input {
 }
 
 .screen-3__title {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 36px;
 	line-height: 32px;
 	color: #3cd072;
@@ -820,6 +1023,14 @@ textarea.input {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	padding: 40px 0px 0px 0px;
+}
+@media (max-width: 479.98px) {
+	.screen-3__items {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
 }
 
 .screen-3-header {
@@ -836,7 +1047,8 @@ textarea.input {
 	padding: 49px 0px 0px 0px;
 }
 .screen-3-header__text {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 32px;
 	color: #000000;
@@ -847,20 +1059,39 @@ textarea.input {
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 33%;
 	        flex: 0 0 33%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .screen-3-item__number {
 	text-align: center;
 }
 .screen-3-item__text {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 32px;
 	text-align: center;
 	color: #000000;
 	padding: 23px 0px 51px 0px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
 }
 .screen-3-item__icon {
 	text-align: center;
+}
+.screen-3-item__icon img {
+	width: 100%;
+}
+@media (max-width: 767.98px) {
+	.screen-3-item__icon {
+		display: none;
+	}
 }
 
 .screen-4 {
@@ -869,11 +1100,17 @@ textarea.input {
 	margin: -255px 0px 0px 0px;
 	z-index: 3;
 }
+@media (max-width: 767.98px) {
+	.screen-4 {
+		margin: 0px 0px 0px 0px;
+	}
+}
 .screen-4__body {
 	padding: 71px 0px 98px 0px;
 }
 .screen-4__title {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 32px;
 	color: #ffffff;
@@ -881,7 +1118,8 @@ textarea.input {
 	text-align: center;
 }
 .screen-4__subtitle {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 36px;
 	line-height: 32px;
 	color: #3cd072;
@@ -898,10 +1136,28 @@ textarea.input {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
+.slick-list {
+	overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	/*align-items: flex-start;*/
+	/*если adaptiveHeight: true*/
+}
+
 .screen-5 {
 	background: url("../img/screen-5/01.png") 50% 55% no-repeat;
 	height: 697px;
 	position: relative;
+}
+@media (max-width: 991.98px) {
+	.screen-5 {
+		height: auto;
+	}
 }
 .screen-5__body {
 	height: 100%;
@@ -916,6 +1172,13 @@ textarea.input {
 	    -ms-flex: 0 0 50%;
 	        flex: 0 0 50%;
 }
+@media (max-width: 767.98px) {
+	.screen-5__leftpart {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 100%;
+		        flex: 0 0 100%;
+	}
+}
 .screen-5__title {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -923,7 +1186,8 @@ textarea.input {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 36px;
 	line-height: 32px;
 	color: #fff;
@@ -933,18 +1197,30 @@ textarea.input {
 	padding: 0px 0px 0px 28px;
 }
 .screen-5__text {
-	font-family: HelveticaNeueMedium;
+	font-family: HelveticaNeue;
+	font-weight: 500;
 	font-size: 16px;
 	line-height: 24px;
 	color: #000000;
 }
 .screen-5__list {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 24px;
 	font-weight: 600;
 	color: #ffffff;
 	padding: 35px 60px 0px 0px;
+}
+@media (max-width: 991.98px) {
+	.screen-5__list {
+		padding: 35px 30px 0px 0px;
+	}
+}
+@media (max-width: 991.98px) {
+	.screen-5__list {
+		padding: 35px 0px 0px 0px;
+	}
 }
 .screen-5__list li {
 	background: url("../img/screen-5/screen5__list/01.svg") left top no-repeat;
@@ -954,6 +1230,11 @@ textarea.input {
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 50%;
 	        flex: 0 0 50%;
+}
+@media (max-width: 767.98px) {
+	.screen-5__rightpart {
+		display: none;
+	}
 }
 .screen-5__icons {
 	height: 745px;
@@ -996,7 +1277,8 @@ textarea.input {
 	padding: 56px 0px 48px 0px;
 }
 .sing-up__title {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 24px;
 	color: #000000;
@@ -1010,12 +1292,22 @@ textarea.input {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
+@media (max-width: 767.98px) {
+	.sing-up__forms {
+		-ms-flex-flow: wrap;
+		    flex-flow: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+}
 .sing-up__form {
 	width: 696px;
 	height: 48px;
 }
 .sing-up__form .input {
-	font-family: MyriadProRegular;
+	font-family: MyriadPro;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
@@ -1029,7 +1321,8 @@ textarea.input {
 	border: 2px solid red;
 }
 .sing-up__button {
-	font-family: "MyriadProSemibold";
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 16px;
 	line-height: 24px;
 	color: #3cd072;
@@ -1038,6 +1331,12 @@ textarea.input {
 	width: 216px;
 	height: 48px;
 	background-color: #000000;
+	margin: 0px 0px 0px 10px;
+}
+@media (max-width: 767.98px) {
+	.sing-up__button {
+		margin: 15px 0px 0px 0px;
+	}
 }
 
 .screen-6__body {
@@ -1048,14 +1347,16 @@ textarea.input {
 	padding: 0px 130px 0px 130px;
 }
 .screen-6__title {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 32px;
 	margin: 20px 0px 0px 0px;
 	color: #000000;
 }
 .screen-6__subtitle {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 36px;
 	line-height: 32px;
 	margin: 16px 0px 0px 0px;
@@ -1063,7 +1364,8 @@ textarea.input {
 }
 .screen-6__text {
 	text-align: center;
-	font-family: HelveticaNeueMedium;
+	font-family: HelveticaNeue;
+	font-weight: 500;
 	font-size: 16px;
 	line-height: 24px;
 	padding: 35px 0px 43px 0px;
@@ -1133,7 +1435,8 @@ textarea.input {
 	padding: 0px 0px 95px 0px;
 }
 .screen-7__title {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 36px;
 	line-height: 32px;
 	color: #3cd072;
@@ -1167,13 +1470,15 @@ textarea.input {
 	width: 322px;
 }
 .creen-7-item__name {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 32px;
 	line-height: 32px;
 	color: #3cd072;
 }
 .creen-7-item__from {
-	font-family: HelveticaNeuelight;
+	font-family: "HelveticaNeue";
+	font-weight: 300;
 	font-size: 24px;
 	line-height: 24px;
 	color: #000;
@@ -1191,7 +1496,8 @@ textarea.input {
 	        justify-content: space-between;
 }
 .creen-7-item__watt {
-	font-family: HelveticaNeuelight;
+	font-family: "HelveticaNeue";
+	font-weight: 300;
 	font-size: 24px;
 	line-height: 24px;
 	color: #000;
@@ -1205,7 +1511,8 @@ textarea.input {
 	        align-items: center;
 }
 .creen-7-item__vector-text {
-	font-family: "HelveticaNeuethin";
+	font-family: "HelveticaNeue";
+	font-weight: 100;
 	font-size: 68px;
 	line-height: 49px;
 	color: #000;
@@ -1259,7 +1566,8 @@ textarea.input {
 	display: inline-block;
 	color: #b3b3b3;
 	font-size: 16px;
-	font-family: "HelveticaNeuelight";
+	font-family: "HelveticaNeue";
+	font-weight: 300;
 	vertical-align: bottom;
 	padding: 0px 0px 0px 10px;
 }
@@ -1307,7 +1615,8 @@ textarea.input {
 	        flex: 0 0 58%;
 }
 .screen-8__forms-title {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 36px;
 	line-height: 32px;
 	color: #000000;
@@ -1324,7 +1633,8 @@ textarea.input {
 .screen-8__form input {
 	width: 100%;
 	height: 100%;
-	font-family: MyriadProRegular;
+	font-family: MyriadPro;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
 	color: #3cd072;
@@ -1338,7 +1648,8 @@ textarea.input {
 .screen-8__form textarea.input {
 	width: 100%;
 	height: 100%;
-	font-family: MyriadProRegular;
+	font-family: MyriadPro;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
 	color: #3cd072;
@@ -1351,7 +1662,8 @@ textarea.input {
 	padding: 0px 0px 0px 0px;
 }
 .screen-8__right-title {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 36px;
 	line-height: 32px;
 	color: #000000;
@@ -1368,7 +1680,8 @@ textarea.input {
 	margin: 0px 0px 24px 18px;
 }
 .social__text a {
-	font-family: MyriadProSemibold;
+	font-family: MyriadPro;
+	font-weight: 600;
 	font-size: 24px;
 	line-height: 24px;
 	color: #ffffff;

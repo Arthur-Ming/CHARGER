@@ -9,32 +9,32 @@
 	src: local("☺"), url("../fonts/SF-Compact-Text-Bold.woff") format("woff"),
 		url("../fonts/SF-Compact-Text-Bold.ttf") format("truetype"),
 		url("../fonts/SF-Compact-Text-Bold.svg") format("svg");
-	font-weight: normal;
+	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
-	font-family: "SFCompactSemibold";
+	font-family: "SFCompact";
 	src: url("../fonts/SF-Compact-Text-Semibold.eot");
 	src: local("☺"), url("../fonts/SF-Compact-Text-Semibold.woff") format("woff"),
 		url("../fonts/SF-Compact-Text-Semibold.ttf") format("truetype"),
 		url("../fonts/SF-Compact-Text-Semibold.svg") format("svg");
-	font-weight: normal;
+	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
-	font-family: "MyriadProRegular";
+	font-family: "MyriadPro";
 	src: url("../fonts/MyriadPro-Regular.eot");
 	src: local("☺"), url("../fonts/MyriadPro-Regular.woff") format("woff"),
 		url("../fonts/MyriadPro-Regular.ttf") format("truetype"), url("../fonts/MyriadPro-Regular.svg") format("svg");
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: "MyriadProSemibold";
+	font-family: "MyriadPro";
 	src: url("../fonts/MyriadPro-Semibold.eot");
 	src: local("☺"), url("../fonts/MyriadPro-Semibold.woff") format("woff"),
 		url("../fonts/MyriadPro-Semibold.ttf") format("truetype"), url("../fonts/MyriadPro-Semibold.svg") format("svg");
-	font-weight: normal;
+	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
@@ -42,34 +42,34 @@
 	src: url("../fonts/Lucida Grande.eot");
 	src: local("☺"), url("../fonts/Lucida Grande.woff") format("woff"),
 		url("../fonts/Lucida Grande.ttf") format("truetype"), url("../fonts/Lucida Grande.svg") format("svg");
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: "HelveticaNeuethin";
+	font-family: "HelveticaNeue";
 	src: url("../fonts/helveticaneuecyr-thin.eot");
 	src: local("☺"), url("../fonts/helveticaneuecyr-thin.woff") format("woff"),
 		url("../fonts/helveticaneuecyr-thin.ttf") format("truetype"),
 		url("../fonts/helveticaneuecyr-thin.svg") format("svg");
-	font-weight: normal;
+	font-weight: 100;
 	font-style: normal;
 }
 @font-face {
-	font-family: "HelveticaNeuelight";
+	font-family: "HelveticaNeue";
 	src: url("../fonts/helveticaneuecyr-light.eot");
 	src: local("☺"), url("../fonts/helveticaneuecyr-light.woff") format("woff"),
 		url("../fonts/helveticaneuecyr-light.ttf") format("truetype"),
 		url("../fonts/helveticaneuecyr-light.svg") format("svg");
-	font-weight: normal;
+	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
-	font-family: "HelveticaNeueMedium";
+	font-family: "HelveticaNeue";
 	src: url("../fonts/HelveticaNeueCyr-Medium.eot");
 	src: local("☺"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"),
 		url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype"),
 		url("../fonts/HelveticaNeueCyr-Medium.svg") format("svg");
-	font-weight: normal;
+	font-weight: 500;
 	font-style: normal;
 }
 //<Подключаем шрифты>=======================================================================================
@@ -122,15 +122,11 @@ body {
 	max-width: $mw + px;
 	margin: 0 auto;
 	width: 100%;
-	@media (max-width: $md1+px) {
-		max-width: 970px;
-	}
+
 	@media (max-width: $md2+px) {
-		max-width: 750px;
+		padding: 0px 20px 0px 20px;
 	}
 	@media (max-width: $md3+px) {
-		max-width: none;
-		padding: 0 10px;
 	}
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -157,19 +153,41 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 
 .first-screen {
-	background-image: url("../img/first-screen/01.png");
-	height: 625px;
 	position: relative;
 	z-index: 8;
-
+	@media (max-width: $md3+px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.layer-1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		img {
+			display: none;
+		}
+	}
 	&__title {
 		position: relative;
 		z-index: 8;
-		font-family: "SFCompactSemibold";
+		font-family: "SFCompact";
+		font-weight: 600;
 		font-size: 35.4px;
 		line-height: 22px;
 		color: #ffffff;
 		padding: 65px 0px 0px 0px;
+		@media (max-width: $md2+px) {
+			padding: 35px 0px 0px 0px;
+		}
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
 	}
 
 	&__body {
@@ -181,16 +199,29 @@ body {
 	&__left-column {
 		flex: 45%;
 		padding: 103px 0px 0px 0px;
+		@media (max-width: $md2+px) {
+			padding: 45px 0px 0px 0px;
+		}
+		@media (max-width: $md3+px) {
+			flex: 100%;
+			padding: 35px 0px 0px 0px;
+		}
 	}
 
 	&__right-column {
 		flex: 55%;
+		@media (max-width: $md3+px) {
+			flex: 0%;
+		}
 	}
 }
 
 .first-screen-text {
 	position: relative;
 	z-index: 8;
+	@media (max-width: $md3+px) {
+		flex: 1 1 50%;
+	}
 	&__header {
 		display: flex;
 		align-items: center;
@@ -208,14 +239,15 @@ body {
 	&__title {
 		margin: 0px 0px 0px 22px;
 		h2 {
-			font-family: MyriadProRegular;
+			font-family: MyriadPro;
+			font-weight: 400;
 			font-size: 32px;
 			line-height: 32px;
-
 			color: #fff;
 		}
 		h3 {
-			font-family: MyriadProSemibold;
+			font-family: MyriadPro;
+			font-weight: 600;
 			font-size: 32px;
 			line-height: 32px;
 
@@ -224,19 +256,34 @@ body {
 	}
 
 	&__text {
-		font-family: "HelveticaNeuelight";
+		font-family: "HelveticaNeue";
+		font-weight: 300;
 		font-size: 16px;
 		line-height: 24px;
 		color: #fff;
 		margin: 24px 0px 10px 0px;
 		letter-spacing: 0.2px;
+		@media (max-width: $md3+px) {
+			margin: 24px 0px 20px 0px;
+		}
+	}
+}
+.appstorenew {
+	@media (max-width: $md3+px) {
+		text-align: center;
+		flex: 0 0 30%;
 	}
 }
 
 .first-screen-form {
 	margin: 53px 0px 0px 0px;
+	@media (max-width: $md3+px) {
+		margin: 30px 0px 0px 0px;
+		flex: 0 0 40%;
+	}
 	&__title {
-		font-family: MyriadProRegular;
+		font-family: MyriadPro;
+		font-weight: 400;
 		font-size: 16px;
 		line-height: 24px;
 		color: #ffffff;
@@ -245,6 +292,13 @@ body {
 
 	&__block {
 		display: flex;
+		@media (max-width: $md2+px) {
+			flex-flow: wrap;
+		}
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__item {
@@ -253,7 +307,8 @@ body {
 		border: 2px solid #ffffff;
 
 		.input {
-			font-family: MyriadProRegular;
+			font-family: MyriadPro;
+			font-weight: 400;
 			width: 100%;
 			height: 100%;
 			font-size: 16px;
@@ -263,14 +318,19 @@ body {
 		.input.err {
 			border: 2px solid red;
 		}
+		@media (max-width: $md3+px) {
+			width: 100%;
+		}
 	}
 
 	&__button {
 		margin: 0px 0px 0px 23px;
+
 		display: flex;
 		justify-content: center;
 		button {
-			font-family: "MyriadProRegular";
+			font-family: MyriadPro;
+			font-weight: 400;
 			font-size: 16px;
 			line-height: 24px;
 			font-weight: 600;
@@ -279,44 +339,79 @@ body {
 			border-radius: 5px;
 			background-color: #ffffff;
 			padding: 12px 0px 12px 0px;
+			@media (max-width: $md2+px) {
+				padding: 10px 0px 10px 0px;
+			}
+		}
+		@media (max-width: $md2+px) {
+			margin: 15px 0px 0px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 30px 0px 30px 0px;
 		}
 	}
 }
 .iphones {
 	position: relative;
-	z-index: 10;
 
 	&__1 {
 		position: absolute;
 		left: 93px;
 		top: -4px;
+		z-index: 50;
+		@media (max-width: $md2+px) {
+			left: 10px;
+		}
 	}
 
 	&__2 {
 		position: absolute;
 		top: 39px;
 		left: 218px;
+		z-index: 50;
+		@media (max-width: $md2+px) {
+			left: 135px;
+		}
+	}
+	@media (max-width: $md3+px) {
+		display: none;
 	}
 }
 
 .layer-2 {
 	position: absolute;
 	width: 100%;
-	height: 625px;
+	height: 100%;
 	left: 0px;
 	top: 0px;
 	background-image: linear-gradient(198deg, #3cd072 0%, rgba(60, 208, 114, 0.7) 100%);
 }
+@media (max-width: $md2+px) {
+}
+
 //==================================================================================
 .screen-2 {
 	background-color: #f0f0f0;
-	height: 624px;
+
 	&__body {
 		display: flex;
 		padding: 0px 0px 50px 0px;
+		@media (max-width: $md2+px) {
+			flex-flow: wrap;
+		}
+		@media (max-width: $md3+px) {
+			padding: 0px;
+		}
 	}
 	&__left {
 		flex-basis: 55%;
+		min-height: 520px;
+		@media (max-width: $md2+px) {
+			flex-basis: 100%;
+		}
+		@media (max-width: $md3+px) {
+			display: none;
+		}
 	}
 	&__iphones {
 		position: relative;
@@ -326,19 +421,48 @@ body {
 		position: absolute;
 		left: 72px;
 		top: -38px;
+		@media (max-width: $md2+px) {
+			left: 30%;
+		}
 	}
 
 	&__iphone-2 {
 		position: absolute;
 		top: 172px;
 		left: -92px;
+		@media (max-width: $md2+px) {
+			left: 15%;
+		}
 	}
 
 	&__right {
 		padding: 145px 0px 0px 42px;
 		flex-basis: 45%;
+		@media (max-width: $md2+px) {
+			flex-basis: 100%;
+			display: flex;
+		}
+		@media (max-width: $md3+px) {
+			flex-flow: wrap;
+			padding: 45px 0px 0px 0px;
+		}
 	}
 
+	&__item {
+		@media (max-width: $md2+px) {
+			flex-basis: 50%;
+			padding: 0px 20px 0px 0px;
+		}
+		@media (max-width: $md3+px) {
+			padding: 0px;
+			flex-basis: 100%;
+		}
+	}
+	&__item:last-child {
+		@media (max-width: $md2+px) {
+			padding: 0px 0px 0px 0px;
+		}
+	}
 	&__title {
 		display: flex;
 		align-items: center;
@@ -348,7 +472,8 @@ body {
 	}
 
 	&__title-title {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 24px;
 		line-height: 32px;
 		padding: 0px 0px 0px 25px;
@@ -356,7 +481,8 @@ body {
 	}
 
 	&__text {
-		font-family: HelveticaNeueMedium;
+		font-family: HelveticaNeue;
+		font-weight: 500;
 		font-size: 16px;
 		line-height: 24px;
 		padding: 10px 0px 45px 0px;
@@ -370,7 +496,8 @@ body {
 	}
 
 	&__title {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 36px;
 		line-height: 32px;
 
@@ -381,6 +508,9 @@ body {
 		display: flex;
 		justify-content: space-between;
 		padding: 40px 0px 0px 0px;
+		@media (max-width: $md4+px) {
+			flex-direction: column;
+		}
 	}
 }
 .screen-3-header {
@@ -393,7 +523,8 @@ body {
 	}
 
 	&__text {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 24px;
 		line-height: 32px;
 		color: #000000;
@@ -402,20 +533,31 @@ body {
 }
 .screen-3-item {
 	flex: 0 0 33%;
+	display: flex;
+	flex-direction: column;
 	&__number {
 		text-align: center;
 	}
 
 	&__text {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 24px;
 		line-height: 32px;
 		text-align: center;
 		color: #000000;
 		padding: 23px 0px 51px 0px;
+		flex: 1 1 auto;
 	}
 	&__icon {
 		text-align: center;
+
+		img {
+			width: 100%;
+		}
+		@media (max-width: $md3+px) {
+			display: none;
+		}
 	}
 }
 //=======================================================
@@ -424,12 +566,16 @@ body {
 	background-color: #000000;
 	margin: -255px 0px 0px 0px;
 	z-index: 3;
+	@media (max-width: $md3+px) {
+		margin: 0px 0px 0px 0px;
+	}
 	&__body {
 		padding: 71px 0px 98px 0px;
 	}
 
 	&__title {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 24px;
 		line-height: 32px;
 		color: #ffffff;
@@ -438,7 +584,8 @@ body {
 	}
 
 	&__subtitle {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 36px;
 		line-height: 32px;
 		color: #3cd072;
@@ -456,12 +603,24 @@ body {
 	&__item {
 	}
 }
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+	display: flex;
+
+	/*align-items: flex-start;*/ /*если adaptiveHeight: true*/
+}
 
 //====================================================================================================
 .screen-5 {
 	background: url("../img/screen-5/01.png") 50% 55% no-repeat;
 	height: 697px;
 	position: relative;
+	@media (max-width: $md2+px) {
+		height: auto;
+	}
 
 	&__body {
 		height: 100%;
@@ -472,12 +631,16 @@ body {
 
 	&__leftpart {
 		flex: 0 0 50%;
+		@media (max-width: $md3+px) {
+			flex: 0 0 100%;
+		}
 	}
 
 	&__title {
 		display: flex;
 		align-items: center;
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 36px;
 		line-height: 32px;
 		color: #fff;
@@ -488,18 +651,26 @@ body {
 	}
 
 	&__text {
-		font-family: HelveticaNeueMedium;
+		font-family: HelveticaNeue;
+		font-weight: 500;
 		font-size: 16px;
 		line-height: 24px;
 		color: #000000;
 	}
 	&__list {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 24px;
 		line-height: 24px;
 		font-weight: 600;
 		color: #ffffff;
 		padding: 35px 60px 0px 0px;
+		@media (max-width: $md2+px) {
+			padding: 35px 30px 0px 0px;
+		}
+		@media (max-width: $md2+px) {
+			padding: 35px 0px 0px 0px;
+		}
 		li {
 			background: url("../img/screen-5/screen5__list/01.svg") left top no-repeat;
 			padding: 16px 0px 32px 80px;
@@ -508,6 +679,9 @@ body {
 
 	&__rightpart {
 		flex: 0 0 50%;
+		@media (max-width: $md3+px) {
+			display: none;
+		}
 	}
 
 	&__icons {
@@ -541,7 +715,8 @@ body {
 	}
 
 	&__title {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 24px;
 		line-height: 24px;
 		color: #000000;
@@ -551,6 +726,10 @@ body {
 	&__forms {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: $md3+px) {
+			flex-flow: wrap;
+			justify-content: center;
+		}
 	}
 
 	&__form {
@@ -558,7 +737,8 @@ body {
 		height: 48px;
 
 		.input {
-			font-family: MyriadProRegular;
+			font-family: MyriadPro;
+			font-weight: 400;
 			font-size: 16px;
 			line-height: 24px;
 			font-weight: 400;
@@ -574,7 +754,8 @@ body {
 	}
 
 	&__button {
-		font-family: "MyriadProSemibold";
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 16px;
 		line-height: 24px;
 		color: #3cd072;
@@ -583,6 +764,10 @@ body {
 		width: 216px;
 		height: 48px;
 		background-color: #000000;
+		margin: 0px 0px 0px 10px;
+		@media (max-width: $md3+px) {
+			margin: 15px 0px 0px 0px;
+		}
 	}
 }
 //=======================================================================================
@@ -600,7 +785,8 @@ body {
 	}
 
 	&__title {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 24px;
 		line-height: 32px;
 		margin: 20px 0px 0px 0px;
@@ -608,7 +794,8 @@ body {
 	}
 
 	&__subtitle {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 36px;
 		line-height: 32px;
 		margin: 16px 0px 0px 0px;
@@ -617,7 +804,8 @@ body {
 
 	&__text {
 		text-align: center;
-		font-family: HelveticaNeueMedium;
+		font-family: HelveticaNeue;
+		font-weight: 500;
 		font-size: 16px;
 		line-height: 24px;
 		padding: 35px 0px 43px 0px;
@@ -678,7 +866,8 @@ body {
 .screen-7 {
 	padding: 0px 0px 95px 0px;
 	&__title {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 36px;
 		line-height: 32px;
 		color: #3cd072;
@@ -708,14 +897,16 @@ body {
 	}
 
 	&__name {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 32px;
 		line-height: 32px;
 		color: #3cd072;
 	}
 
 	&__from {
-		font-family: HelveticaNeuelight;
+		font-family: "HelveticaNeue";
+		font-weight: 300;
 		font-size: 24px;
 		line-height: 24px;
 		color: #000;
@@ -728,7 +919,8 @@ body {
 	}
 
 	&__watt {
-		font-family: HelveticaNeuelight;
+		font-family: "HelveticaNeue";
+		font-weight: 300;
 		font-size: 24px;
 		line-height: 24px;
 		color: #000;
@@ -743,7 +935,8 @@ body {
 	}
 
 	&__vector-text {
-		font-family: "HelveticaNeuethin";
+		font-family: "HelveticaNeue";
+		font-weight: 100;
 		font-size: 68px;
 		line-height: 49px;
 		color: #000;
@@ -795,7 +988,8 @@ body {
 	display: inline-block;
 	color: #b3b3b3;
 	font-size: 16px;
-	font-family: "HelveticaNeuelight";
+	font-family: "HelveticaNeue";
+	font-weight: 300;
 	vertical-align: bottom;
 	padding: 0px 0px 0px 10px;
 }
@@ -853,7 +1047,8 @@ body {
 	}
 
 	&__forms-title {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 36px;
 		line-height: 32px;
 		color: #000000;
@@ -873,7 +1068,8 @@ body {
 		input {
 			width: 100%;
 			height: 100%;
-			font-family: MyriadProRegular;
+			font-family: MyriadPro;
+			font-weight: 400;
 			font-size: 16px;
 			line-height: 24px;
 
@@ -890,7 +1086,8 @@ body {
 		textarea.input {
 			width: 100%;
 			height: 100%;
-			font-family: MyriadProRegular;
+			font-family: MyriadPro;
+			font-weight: 400;
 			font-size: 16px;
 			line-height: 24px;
 			color: #3cd072;
@@ -904,7 +1101,8 @@ body {
 	}
 
 	&__right-title {
-		font-family: MyriadProSemibold;
+		font-family: MyriadPro;
+		font-weight: 600;
 		font-size: 36px;
 		line-height: 32px;
 		color: #000000;
@@ -921,7 +1119,8 @@ body {
 
 	&__text {
 		a {
-			font-family: MyriadProSemibold;
+			font-family: MyriadPro;
+			font-weight: 600;
 			font-size: 24px;
 			line-height: 24px;
 			color: #ffffff;
