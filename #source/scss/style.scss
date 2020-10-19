@@ -3,6 +3,7 @@
 //</МИКСИНЫ>===============================================================================================
 
 //<ШРИФТЫ>===============================================================================================
+
 @font-face {
 	font-family: "SFCompact";
 	src: url("../fonts/SF-Compact-Text-Bold.eot");
@@ -111,7 +112,6 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
-
 	&.loaded {
 	}
 }
@@ -122,7 +122,6 @@ body {
 	max-width: $mw + px;
 	margin: 0 auto;
 	width: 100%;
-
 	@media (max-width: $md2+px) {
 		padding: 0px 20px 0px 20px;
 	}
@@ -134,21 +133,8 @@ body {
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 @import "forms.scss";
 //@import "ui.scss";
-//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-//@import "../../js/fancybox/jquery.fancybox.scss";
-//@import "datepicker.scss";
-//@import "fontawesome.scss";
-//@import "popover.min.scss";
-//@import "baguetteBox.scss";
-//@import "pagging.scss";
-//@import "icons.scss";
-//@import "popup.scss";
-//@import "header.scss";
 @import "footer.scss";
-//@import "home.scss";
-//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 
@@ -169,6 +155,7 @@ body {
 		background-position: 0 0;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-attachment: fixed;
 		img {
 			display: none;
 		}
@@ -250,7 +237,6 @@ body {
 			font-weight: 600;
 			font-size: 32px;
 			line-height: 32px;
-
 			color: #fff;
 		}
 	}
@@ -274,7 +260,10 @@ body {
 		flex: 0 0 30%;
 	}
 }
-
+.appstorenew a img:hover {
+	//box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+	//transition: opacity 0.5s ease 0s;
+}
 .first-screen-form {
 	margin: 53px 0px 0px 0px;
 	@media (max-width: $md3+px) {
@@ -304,9 +293,9 @@ body {
 	&__item {
 		width: 296px;
 		height: 48px;
-		border: 2px solid #ffffff;
 
 		.input {
+			border: 2px solid #ffffff;
 			font-family: MyriadPro;
 			font-weight: 400;
 			width: 100%;
@@ -325,7 +314,6 @@ body {
 
 	&__button {
 		margin: 0px 0px 0px 23px;
-
 		display: flex;
 		justify-content: center;
 		button {
@@ -349,6 +337,12 @@ body {
 		@media (max-width: $md3+px) {
 			margin: 30px 0px 30px 0px;
 		}
+	}
+	&__button button:hover {
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+		transition: opacity 0.5s ease 0s;
+		color: #17ad3f;
+		background-color: #ddd;
 	}
 }
 .iphones {
@@ -384,11 +378,10 @@ body {
 	height: 100%;
 	left: 0px;
 	top: 0px;
-	background-image: linear-gradient(198deg, #3cd072 0%, rgba(60, 208, 114, 0.7) 100%);
+	background-color: rgba(60, 208, 114, 0.8);
 }
 @media (max-width: $md2+px) {
 }
-
 //==================================================================================
 .screen-2 {
 	background-color: #f0f0f0;
@@ -494,13 +487,11 @@ body {
 .screen-3 {
 	&__body {
 	}
-
 	&__title {
 		font-family: MyriadPro;
 		font-weight: 600;
 		font-size: 36px;
 		line-height: 32px;
-
 		color: #3cd072;
 	}
 
@@ -597,10 +588,11 @@ body {
 		min-width: 1406px;
 		margin: 0px 0px 0px -20px;
 		display: flex;
-		justify-content: space-between;
 	}
 
 	&__item {
+		display: flex;
+		justify-content: center;
 	}
 }
 .slick-list {
@@ -609,14 +601,12 @@ body {
 /* Лента слайдов */
 .slick-track {
 	display: flex;
-
-	/*align-items: flex-start;*/ /*если adaptiveHeight: true*/
 }
 
 //====================================================================================================
 .screen-5 {
-	background: url("../img/screen-5/01.png") 50% 55% no-repeat;
-	height: 697px;
+	background: url("../img/screen-5/01.png") 0 0% / cover no-repeat;
+	min-height: 697px;
 	position: relative;
 	@media (max-width: $md2+px) {
 		height: auto;
@@ -702,7 +692,7 @@ body {
 		height: 100%;
 		left: 0px;
 		top: 0px;
-		background-image: linear-gradient(198deg, #3cd072 0%, rgba(60, 208, 114, 0.7) 100%);
+		background-color: rgba(60, 208, 114, 0.8);
 	}
 }
 //===================================================================
@@ -768,6 +758,12 @@ body {
 		@media (max-width: $md3+px) {
 			margin: 15px 0px 0px 0px;
 		}
+	}
+	&__button:hover {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		transition: opacity 0.5s ease 0s;
+		color: #17ad3f;
+		//background-color: #fff;
 	}
 }
 //=======================================================================================
@@ -880,13 +876,11 @@ body {
 	&__main-icon {
 		position: absolute;
 		top: 15px;
-		left: 35%;
+		left: 50%;
+		transform: translate(-50%, 0);
 		z-index: 2;
 		@media (max-width: $md1+px) {
 			position: relative;
-			top: 0;
-			left: 0;
-			margin: 0 auto;
 			img {
 				width: 325px;
 				height: 377px;
@@ -901,7 +895,7 @@ body {
 			width: 296px;
 		}
 		@media (max-width: $md1+px) {
-			margin: 20px 0px 0px 0px;
+			margin: 30px 0px 0px 0px;
 		}
 	}
 }
@@ -919,7 +913,6 @@ body {
 }
 
 .creen-7-item {
-	//padding: 20px 0px 25px 0px;
 	display: flex;
 	border-top: 2px solid #adadad;
 	@media (max-width: $md1+px) {
@@ -1077,11 +1070,16 @@ body {
 			background-color: #3bd071;
 			color: #ffffff;
 		}
+		&_black:hover {
+			box-shadow: 0 0 10px rgba(59, 208, 113, 0.5);
+			transition: opacity 0.5s ease 0s;
+			color: #ffffff;
+		}
 	}
 }
 //===========================================================================
 .screen-8 {
-	background-image: url("../img/screen-8/01.png");
+	background: url("../img/screen-8/01.png") 0 0 / cover no-repeat;
 	min-height: 627px;
 	position: relative;
 	z-index: 8;
@@ -1092,7 +1090,7 @@ body {
 		height: 100%;
 		left: 0px;
 		top: 0px;
-		background-image: linear-gradient(198deg, #3cd072 0%, rgba(60, 208, 114, 0.7) 100%);
+		background-color: rgba(60, 208, 114, 0.8);
 	}
 
 	&__body {
@@ -1125,6 +1123,11 @@ body {
 		.sing-up__button {
 			color: #fff;
 		}
+		.button:hover {
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+			transition: opacity 0.5s ease 0s;
+			color: #ddd;
+		}
 		@media (max-width: $md3+px) {
 			display: flex;
 			flex-direction: column;
@@ -1149,6 +1152,7 @@ body {
 
 			color: #3cd072;
 		}
+
 		.input.err {
 			border: 2px solid red;
 		}
@@ -1206,5 +1210,3 @@ body {
 		}
 	}
 }
-
-//</ОСНОВНОЙ БЛОК>====================================================================================================

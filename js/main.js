@@ -45,10 +45,28 @@ $(document).ready(function () {
    $('.screen-4__items').slick({
 
       slidesToShow: 10,
-      slidesToScroll: 1,
-
+      slidesToScroll: 2,
       infinite: true,
       centerPadding: '10px',
       arrows: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      waitForAnimate: true,
+      responsive: [
+         {
+            breakpoint: 992,
+            settings: {
+               slidesToShow: 8,
+
+            }
+         },
+         {
+            breakpoint: 480,
+            settings: {
+               centerMode: true,
+
+            }
+         }
+      ],
    });
 });
