@@ -924,7 +924,7 @@ body {
 
 	&__ava {
 		display: flex;
-		flex: 1 1 auto;
+		flex: 0 0 auto;
 		padding: 20px 0px 25px 0px;
 		img {
 			display: block;
@@ -933,13 +933,11 @@ body {
 	}
 
 	&__info {
-		flex: 1 1 auto;
+		flex: 0 0 322px;
 		display: flex;
 		padding: 20px 0px 25px 0px;
 		flex-direction: column;
 		justify-content: space-between;
-
-		width: 322px;
 	}
 
 	&__name {
@@ -949,6 +947,7 @@ body {
 		line-height: 32px;
 		color: #3cd072;
 		padding: 0px 0px 10px 0px;
+		flex: 1 0 auto;
 	}
 
 	&__from {
@@ -965,6 +964,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		white-space: nowrap;
 	}
 
 	&__watt {

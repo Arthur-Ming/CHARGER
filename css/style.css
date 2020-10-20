@@ -1554,9 +1554,9 @@ textarea.input {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-flex: 1;
-	    -ms-flex: 1 1 auto;
-	        flex: 1 1 auto;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
 	padding: 20px 0px 25px 0px;
 }
 .creen-7-item__ava img {
@@ -1564,9 +1564,9 @@ textarea.input {
 	margin: 0px 22px 0px 0px;
 }
 .creen-7-item__info {
-	-webkit-box-flex: 1;
-	    -ms-flex: 1 1 auto;
-	        flex: 1 1 auto;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 322px;
+	        flex: 0 0 322px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1578,7 +1578,6 @@ textarea.input {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	width: 322px;
 }
 .creen-7-item__name {
 	font-family: MyriadPro;
@@ -1587,6 +1586,9 @@ textarea.input {
 	line-height: 32px;
 	color: #3cd072;
 	padding: 0px 0px 10px 0px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
 }
 .creen-7-item__from {
 	font-family: "HelveticaNeue";
@@ -1608,6 +1610,7 @@ textarea.input {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	white-space: nowrap;
 }
 .creen-7-item__watt {
 	font-family: "HelveticaNeue";
