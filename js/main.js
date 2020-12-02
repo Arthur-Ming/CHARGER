@@ -39,7 +39,7 @@ function ibg() {
    });
 }
 ibg();
-
+/*
 $(document).ready(function () {
 
    $('.screen-4__items').slick({
@@ -70,3 +70,15 @@ $(document).ready(function () {
       ],
    });
 });
+*/
+
+var swiper = new Swiper('.screen-4__slider', {
+   slidesPerView: 10,
+   spaceBetween: 5,
+   loop: true,
+   /*autoplay: {
+      delay: 1000,
+
+   }*/
+
+});;
